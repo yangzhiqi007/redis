@@ -1,0 +1,6 @@
+{
+	"addr_alias":[
+		{ "addr": "host:port", "alias": "alias1"},
+		{ "addr": "host:port", "alias": "alias2"},		
+	]
+}

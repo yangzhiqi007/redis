@@ -1,0 +1,107 @@
+{
+	"ServerList": [
+		{
+			"Address": "100.64.10.210:17701",
+			"Name": "dev210"
+		},
+		{
+			"Address": "39.105.118.58:17701",
+			"Name": "ex34"
+		},
+		{
+			"Address": "60.205.230.182:17701",
+			"Name": "ex36"
+		},
+		{
+			"Address": "39.106.160.249:17701",
+			"Name": "ex37"
+		},
+		{
+			"Address": "39.106.215.20:17701",
+			"Name": "ex38"
+		}
+	],
+	"TaskList": [
+		{
+			"Name": "stop_ex36",
+			"Group": "stopsvc_extest",
+			"Server": "ex36",
+			"Code": "sh /data/games/bb_tool/svcop.sh stop ex36 extest"
+		},
+		{
+			"Name": "stop_ex37",
+			"Group": "stopsvc_extest",
+			"Server": "ex37",
+			"Code": "sh /data/games/bb_tool/svcop.sh stop ex37 extest"
+		},
+		{
+			"Name": "stop_ex38",
+			"Group": "stopsvc_extest",
+			"Server": "ex38",
+			"Code": "sh /data/games/bb_tool/svcop.sh stop ex38 extest"
+		},
+		{
+			"Name": "start_ex36",
+			"Group": "startsvc_extest",
+			"Server": "ex36",
+			"Code": "sh /data/games/bb_tool/svcop.sh start ex36 extest"
+		},
+		{
+			"Name": "start_ex37",
+			"Group": "startsvc_extest",
+			"Server": "ex37",
+			"Code": "sh /data/games/bb_tool/svcop.sh start ex37 extest"
+		},
+		{
+			"Name": "start_ex38",
+			"Group": "startsvc_extest",
+			"Server": "ex38",
+			"Code": "sh /data/games/bb_tool/svcop.sh start ex38 extest"
+		},
+		{
+			"Name": "updatecfg_extest",
+			"Group": "updatecfg_extest",
+			"Server": "ex36",
+			"Code": "sh /data/games/bb_tool/svcop.sh updatecfg ex36 extest"
+		},
+		{
+			"Name": "updatesvc_ex36",
+			"Group": "updatesvc_extest",
+			"Server": "ex36",
+			"Code": "sh /data/games/bb_tool/svcop.sh updatesvc ex36 extest"
+		},
+		{
+			"Name": "updatesvc_ex37",
+			"Group": "updatesvc_extest",
+			"Server": "ex37",
+			"Code": "sh /data/games/bb_tool/svcop.sh updatesvc ex37 extest"
+		},
+		{
+			"Name": "updatesvc_ex38",
+			"Group": "updatesvc_extest",
+			"Server": "ex38",
+			"Code": "sh /data/games/bb_tool/svcop.sh updatesvc ex38 extest"
+		},
+		{
+			"Name": "update_extest",
+			"Group": "update_extest",
+			"Server": "dev210",
+			"Code": "cd /data/games/bb_ctrlutil\nexport ServiceFullConfig=./ServiceFull.json\nexport PeckerBinary=/data/games/pecker\nexport SvcToyBinary=./svctoy\nsh ./ControlService.sh pre34 updatecfg\n"
+		},
+		{
+			"Name": "stop_extest",
+			"Group": "stopsvc_extest",
+			"Server": "dev210",
+			"Code": "sh /data/games/bb_ctrlutil/ControlService.sh"
+		}
+	],
+	"SessionList": [
+		{
+			"Token": "421941763",
+			"Account": "admin",
+			"Name": "admin",
+			"Actor": "",
+			"Time": "2019-06-05T17:01:45.3635683+08:00"
+		}
+	]
+}
