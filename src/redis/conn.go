@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/mediocregopher/radix.v2/pool"
 	"github.com/mediocregopher/radix.v2/redis"
+	"redisdrv"
 	"time"
 )
 
@@ -64,4 +65,14 @@ func RedisConnect(addr, password string, maxConnCount int, dbIndex int) {
 		break
 	}
 
+}
+
+func AddLockKey(client *redisdrv.RedisClient, key string) {
+	lock, code := redisdrv.TryLock(client, key)
+	if code != 0 {
+		fmt.Println("TryLock failed")
+		panic(code)
+	}
+
+	defer redisdrv.Unlock(client, lock)
 }
